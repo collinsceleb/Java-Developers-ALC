@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="headerTop">#006064</color>
+    <color name="header">#009688</color>
+    <color name="appColor">#fea953</color>
+
+    <color name="layer">#263238</color>
+    <color name="appColor_clarity">#ccfea953</color>
+
+    <color name="black">#000000</color>
+    <color name="cyan">#26c6da</color>
+</resources>

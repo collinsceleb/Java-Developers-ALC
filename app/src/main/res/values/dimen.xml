@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="full_name">28sp</dimen>
+    <dimen name="user_name">16sp</dimen>
+</resources>
