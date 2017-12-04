@@ -16,13 +16,13 @@
 <item name="android:textColor">?android:textColorSecondary</item>
 </style>
 
-<style name="name" >
+<style name="name" parent="developerProfile" >
 <item name="android:textStyle">bold</item>
 <item name="android:textSize">28sp</item>
 <item name="android:textColor">@color/cyan</item>
 </style>
 
-<style name="username" >
+<style name="username" parent = "developerProfile">
 <item name="android:textStyle">normal</item>
 <item name="android:padding">10dp</item>
 <item name="android:textSize">18sp</item>
@@ -30,14 +30,14 @@
 <item name="android:textColor">@color/headerTop</item>
 </style>
 
-<style name="link">
+<style name="link" parent="developerProfile">
 <item name="android:textStyle">normal</item>
 <item name="android:padding">10dp</item>
 <item name="android:textSize">20sp</item>
 <item name="android:textColor">@color/headerTop</item>
 </style>
 
-<style name="developer_username">
+<style name="developer_username" parent="developerProfile">
 <item name="android:textStyle">normal</item>
 <item name="android:padding">10dp</item>
 <item name="android:textSize">18sp</item>
