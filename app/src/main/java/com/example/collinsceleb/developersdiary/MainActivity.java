@@ -1,5 +1,6 @@
 package com.example.collinsceleb.developersdiary;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -7,11 +8,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.ProgressBar;
 
 import org.json.JSONArray;
@@ -44,14 +45,14 @@ public class MainActivity extends AppCompatActivity {
 
         if(!isDeviceConnected(MainActivity.this)) buildDialog(MainActivity.this).show();
 
-        recyclerView = (RecyclerView) findViewById(R.id.per_developer);
+        recyclerView = findViewById(R.id.per_developer);
         recyclerView.setHasFixedSize(true);
-        load = (ProgressBar) findViewById(R.id.loading);
+        load = findViewById(R.id.loading);
         loading = new ProgressDialog(MainActivity.this);
 
         developer = new ArrayList<>();
 
-        swipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.refresh);
+        swipeRefreshLayout = findViewById(R.id.refresh);
         swipeRefreshLayout.setColorSchemeResources(R.color.headerTop);
         setSwipeRefreshLayout();
         addOnScrollListener();
@@ -143,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             loading.dismiss();
-            recyclerView = (RecyclerView) findViewById(R.id.per_developer);
+            recyclerView = findViewById(R.id.per_developer);
             //set Adapter
             customAdapter = new CustomAdapter(MainActivity.this, developer);
             recyclerView.setAdapter(customAdapter);
